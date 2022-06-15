@@ -16,6 +16,7 @@ app.use(
       `${process.env.URL}:8080`,
       `${process.env.URL}:3000`,
       `${process.env.URL}:80`,
+      process.env.URL,
     ],
     methods: ["GET"],
   })

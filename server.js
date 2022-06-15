@@ -13,9 +13,9 @@ app.use(express.json());
 app.use(
   cors({
     origin: [
-      "http://127.0.0.1:8080",
-      "http://127.0.0.1:3000",
-      "http://127.0.0.1:80",
+      `${process.env.URL}:8080`,
+      `${process.env.URL}:3000`,
+      `${process.env.URL}:80`,
     ],
     methods: ["GET"],
   })

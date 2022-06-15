@@ -3,6 +3,7 @@ const { readdirSync, readFileSync } = require("fs");
 const matter = require("gray-matter");
 const CacheStore = require("./cache");
 const cors = require("cors");
+require("dotenv").config();
 
 const store = new CacheStore();
 
@@ -118,4 +119,4 @@ app.get("/api/:id", (req, res) => {
   }
 });
 
-app.listen(8000);
+app.listen(process.env.PORT, () => console.log("server is running"));
